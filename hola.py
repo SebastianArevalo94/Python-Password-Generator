@@ -4,11 +4,8 @@ def createPassword(longp):
 	password=""
 	abc="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz123456789"
 	for x in range(longp):
-		symbol=random.randint(1,62)
-		password+=abc[symbol]
+		password+=abc[random.randint(0,len(abc)-1)]
 	return password
 		
-
 longp=int(input('Largo de contraseña ? '))
-newPassword=createPassword(longp)
-print(newPassword)
+print(createPassword(longp))
